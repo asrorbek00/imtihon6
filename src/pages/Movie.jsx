@@ -52,7 +52,7 @@ const Movie = () => {
                   <p className="flex gap-2 text-orange-700"><span className="text-white"><BsCalendarDate size={25}/></span>{release_date}</p>
                   
                   <div className="card-actions justify-end">
-                    <Link to={"/movies"} className="btn btn-primary">Back</Link>
+                    <Link to={"/"} className="btn btn-primary">Back</Link>
                   </div>
                 </div>
               </div>

@@ -22,13 +22,19 @@ const MovieList = () => {
 
 
   return (<>
-    <Link to={"search"}>
+  {!movies &&  <div className="text-center py-36">
+    <span className="loading loading-dots loading-lg"></span>
+  </div>}
+  {error && <div>
+<h1 className='text-4xl text-center py-20'>Error!!! Page Not Found Refresh or try Later;)</h1>
+    </div>}
+   {movies && <Link to={"search"}>
       <input
           type="text"
           placeholder="Search Movies"
           className=" mb-5  input input-bordered input-accent w-full max-w-xs"
         />
-        </Link>
+        </Link>}
     <ul className="grid lg:grid-cols-3 gap-x-20 gap-y-16 md:grid-cols-2 sm:grid-cols-1  ">
       {movies &&
         movies.map((Val) => {
@@ -71,7 +77,7 @@ const MovieList = () => {
         })}
     
    </ul> 
-   <div className="join ">
+   {movies && <div className="join lg:ml-[500px] mt-5  md:ml-[370px]  ">
         <Link className="join-item btn" onClick={prevPage}>
           «
         </Link>
@@ -79,7 +85,7 @@ const MovieList = () => {
         <Link className="join-item btn" onClick={() => setPage(page + 1)}>
           »
         </Link>
-      </div>
+      </div>}
    </>
    );
 };

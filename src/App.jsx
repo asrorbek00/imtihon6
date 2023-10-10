@@ -5,8 +5,7 @@ import MainLayout from './layouts/MainLayout'
 import Movie from './pages/Movie'
 import Search from './pages/Search'
 import MovieList from './pages/MovieList'
-import TrendingList from './pages/TrendingList'
-import Trending from './pages/Trending'
+
 
 
 function App() {
@@ -18,15 +17,11 @@ function App() {
       children:[
         {
           index: true,
-          element:<TrendingList/>
-        },
-        {
-          path:"movies",
           element:<MovieList/>
         },
         {
-          path:"trend/:id",
-          element:<Trending/>
+          path:"movie/:id",
+          element:<Movie/>
         },
         {
           path:"movies/search",
@@ -40,18 +35,6 @@ function App() {
         path:"search/s/:id",
         element:<Movie/>
        },
-      {
-        path:"movies/search/s/:id",
-        element:<Movie/>
-      },
-      {
-        path:"tvlist/search/s/:id",
-        element:<Movie/>
-      },
-       {
-        path:"movies/movie/:id",
-        element:<Movie/>
-      },
 
       ]
     }

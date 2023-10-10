@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer{
+
+  .align-element{
+      @apply max-w-6xl mx-auto px-4
+  }
+    
+}
+.active{
+ color: plum;
+}
